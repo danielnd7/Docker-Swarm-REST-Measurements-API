@@ -1,12 +1,13 @@
-from flask import Flask
+from flask import Flask # request
 from redis import Redis, RedisError
-import os
-import socket
+import os 
+import socket # To get the container ID/Hostname
 
 
 # Connect to Redis
 REDIS_HOST = os.getenv('REDIS_HOST', "localhost")
-print("REDIS_HOST: "+REDIS_HOST)
+print("REDIS_HOST: " + REDIS_HOST)
+
 redis = Redis(host=REDIS_HOST, db=0, socket_connect_timeout=2, socket_timeout=2)
 
 app = Flask(__name__)
