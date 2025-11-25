@@ -4,3 +4,4 @@
 # Except the src/ directory and requirements.txt
 !src/
 !requirements.txt
+!Dockerfile
